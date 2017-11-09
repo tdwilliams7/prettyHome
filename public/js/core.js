@@ -65,6 +65,8 @@ function weather(){
                     iconCurrent.innerHTML = '<i class="wi wi-day-sunny-overcast"></i>';
                 } else if (icon === 'clear-day') {
                     iconCurrent.innerHTML = '<i class="wi wi-day-sunny"></i>';
+                } else if (icon === 'clear-night'){
+                    iconCurrent.innerHTML = '<i class="wi wi-night-clear"></i>';
                 }
 
                 //3 day forecast
