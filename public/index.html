@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html ng-app='grocList'>
+<head>
+    <meta charset="utf-8">
+    <meta <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>stop it New Tab</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/css/weather-icons.min.css">
+    <script type="text/javascript" src='js/modernizr-custom.js'></script>
+    <script type="text/javascript" src='js/jquery-3.2.1.min.js'></script>
+    <script type="text/javascript" src='js/popper.min.js'></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script>
+    <script type="text/javascript" src='js/bootstrap.min.js'></script>
+
+</head>
+<body class="container">
+    <section>
+    <div class="row">
+        <div class="col-sm-3">
+            Calendar
+        </div>
+        <div class="col-sm-6" id='clock'>
+
+        </div>
+        <div class="col-sm-3" id='weather'>
+            weather
+            <div class="row">
+                <div class='col-sm-6' id='icon'></div>
+                <div class='col-sm-6' id='temp'></div>
+                <div class='col-sm-12' id='feels'></div>
+            </div>
+            <div class="row" id='forecast'>
+            </div>
+            <p><a href="https://darksky.net/poweredby/">Powered by Dark Sky</a></p>
+        </div>
+    </div>
+    </section>
+    <div class='row'>
+        <div class="col-sm-6">
+            to do list
+        </div>
+        <section ng-controller='displayGrocList'>
+            <div class="col-sm-6" id='grocList'>
+                <h4> Today's Grocery List </h4>
+                <div ng-repeat='food in foods'>{{ food.name }}</div>
+            </div>
+        </section>
+    </div>
+    <script type="text/javascript" src='js/core.js'></script>
+</body>
+</html>
