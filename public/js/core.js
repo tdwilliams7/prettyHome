@@ -15,16 +15,24 @@ function displayGrocList($scope, $http) {
 
 function clock(){
     let clockEl = document.getElementById('clock');
+    let greetingEl = document.getElementById('greeting');
     time = new Date;
     let mins = time.getMinutes();
     let hours = time.getHours();
-    let day = time.getDay();
+
+    let greeting;
     if (mins < 10){
         mins = '0' + mins;
     }
-    if (hours > 12){
+    if (hours > 12 && hours < 17){
         hours = hours - 12;
+        greeting = 'Good Afternoon!';
+    } else if(hours < 12){
+        greeting = 'Good Morning';
+    } else {
+        greeting = 'Good Evening';
     }
+    greetingEl.textContent = greeting;
     clockEl.textContent = hours + ':' + mins ;
 }
 clock();
