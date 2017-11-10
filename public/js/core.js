@@ -24,7 +24,7 @@ function clock(){
     if (mins < 10){
         mins = '0' + mins;
     }
-    if (hours > 12 && hours < 18){
+    if (hours > 13 && hours < 18){
         hours = hours - 12;
         greeting = 'Good Afternoon!';
     } else if(hours < 12){
