@@ -24,12 +24,13 @@ function clock(){
     if (mins < 10){
         mins = '0' + mins;
     }
-    if (hours > 12 ){
+    if (hours > 12 && hours < 18){
         hours = hours - 12;
         greeting = 'Good Afternoon!';
     } else if(hours < 12){
         greeting = 'Good Morning';
     } else {
+        hours -= 12;
         greeting = 'Good Evening';
     }
     greetingEl.textContent = greeting;
