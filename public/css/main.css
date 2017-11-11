@@ -9,9 +9,12 @@ body {
 p {
     font-size: 8px;
 }
+section {
+    padding-bottom: 15%;
+}
 #clock{
     font-size: 100px;
-    margin-top: 20%
+    margin-top: 35%
 }
 #greeting{
     font-size: 35px;
@@ -19,5 +22,4 @@ p {
 
 .row {
     min-height: 50%;
-    padding-bottom: 10%
 }

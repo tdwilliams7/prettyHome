@@ -76,28 +76,37 @@ function weather(){
                     iconCurrent.innerHTML = '<i class="wi wi-day-sunny"></i>';
                 } else if (icon === 'clear-night'){
                     iconCurrent.innerHTML = '<i class="wi wi-night-clear"></i>';
+                } else if (icon === 'snow'){
+                    iconCurrent.innerHTML = '<i class="wi wi-day-snow"></i>';
                 }
 
                 //3 day forecast
-                fore.innerHTML = `<div class='row'><div class="col-xs-2">` + time.getMonth() + '/' + (time.getDate() + 1) + `</div>
+                fore.innerHTML = `<div class='row'><div class="col-xs-2"></div>
                 <div class="col-xs-1"></div>
-                <div class=" col-xs-1">` + Math.round(data.daily.data[1].temperatureLow) + `</div>
+                <div class=" col-xs-1">Low</div>
                 <div class=" col-xs-1"></div>
-                <div class=" col-xs-1">` + Math.round(data.daily.data[1].temperatureHigh) + `</div>
+                <div class=" col-xs-1">High</div>
+                <div class=" col-xs-1"></div>
+                <div class="col-xs-2">Precip</div></div>
+                <div class='row'><div class="col-xs-2">` + time.getMonth() + '/' + (time.getDate() + 1) + `</div>
+                <div class="col-xs-1"></div>
+                <div class=" col-xs-1">` + Math.round(data.daily.data[1].temperatureLow) + '°' +`</div>
+                <div class=" col-xs-1"></div>
+                <div class=" col-xs-1">` + Math.round(data.daily.data[1].temperatureHigh) + '°' +`</div>
                 <div class=" col-xs-1"></div>
                 <div class="col-xs-2">` + (data.daily.data[1].precipProbability * 100).toFixed(0) + '%' + `</div></div>
                 <div class='row'><div class="col-sm-2">` + time.getMonth() + '/' + (time.getDate() + 2) + `</div>
                 <div class="col-sm-1"></div>
-                <div class=" col-sm-1">` + Math.round(data.daily.data[2].temperatureLow) + `</div>
+                <div class=" col-sm-1">` + Math.round(data.daily.data[2].temperatureLow) + '°' +`</div>
                 <div class=" col-sm-1"></div>
-                <div class=" col-sm-1">` + Math.round(data.daily.data[2].temperatureHigh) + `</div>
+                <div class=" col-sm-1">` + Math.round(data.daily.data[2].temperatureHigh) + '°' + `</div>
                 <div class=" col-sm-1"></div>
                 <div class="col-sm-2">` + (data.daily.data[2].precipProbability * 100).toFixed(0) + '%' + `</div></div>
                 <div class='row'><div class="col-sm-2">` + time.getMonth() + '/' + (time.getDate() + 3) + `</div>
                 <div class="col-sm-1"></div>
-                <div class=" col-sm-1">` + Math.round(data.daily.data[3].temperatureLow) + `</div>
+                <div class=" col-sm-1">` + Math.round(data.daily.data[3].temperatureLow) + '°' +`</div>
                 <div class=" col-sm-1"></div>
-                <div class=" col-sm-1">` + Math.round(data.daily.data[3].temperatureHigh) + `</div>
+                <div class=" col-sm-1">` + Math.round(data.daily.data[3].temperatureHigh) + '°' +`</div>
                 <div class=" col-sm-1"></div>
                 <div class="col-sm-2">` + (data.daily.data[3].precipProbability * 100).toFixed(0) + '%' + `</div></div>`;
             }
