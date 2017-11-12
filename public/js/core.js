@@ -65,6 +65,7 @@ function weather(){
                 var temp = Math.round(data.currently.temperature);
                 var feels = Math.round(data.currently.apparentTemperature);
                 var icon = data.currently.icon;
+                var daysofWeek = ['Sun', 'Mon', 'Tues', 'Wed', 'Thurs', 'Fri', 'Sat'];
 
                 elTemp.textContent = temp + '°';
                 elFeels.textContent = 'feels like ' + feels + '°';
@@ -88,21 +89,21 @@ function weather(){
                 <div class=" col-xs-1">H</div>
                 <div class=" col-xs-1"></div>
                 <div class="col-xs-2">Precip</div></div>
-                <div class='row'><div class="col-xs-2">` + time.getMonth() + '/' + (time.getDate() + 1) + `</div>
+                <div class='row'><div class="col-xs-2">` + daysofWeek[(new Date(data.daily.data[1].time * 1000)).getDay()] + `</div>
                 <div class="col-xs-1"></div>
                 <div class=" col-xs-1">` + Math.round(data.daily.data[1].temperatureLow) + '°' +`</div>
                 <div class=" col-xs-1"></div>
                 <div class=" col-xs-1">` + Math.round(data.daily.data[1].temperatureHigh) + '°' +`</div>
                 <div class=" col-xs-1"></div>
                 <div class="col-xs-2">` + (data.daily.data[1].precipProbability * 100).toFixed(0) + '%' + `</div></div>
-                <div class='row'><div class="col-xs-2">` + time.getMonth() + '/' + (time.getDate() + 2) + `</div>
+                <div class='row'><div class="col-xs-2">` + daysofWeek[(new Date(data.daily.data[2].time * 1000)).getDay()] + `</div>
                 <div class="col-xs-1"></div>
                 <div class=" col-xs-1">` + Math.round(data.daily.data[2].temperatureLow) + '°' +`</div>
                 <div class=" col-xs-1"></div>
                 <div class=" col-xs-1">` + Math.round(data.daily.data[2].temperatureHigh) + '°' + `</div>
                 <div class=" col-xs-1"></div>
                 <div class="col-xs-2">` + (data.daily.data[2].precipProbability * 100).toFixed(0) + '%' + `</div></div>
-                <div class='row'><div class="col-xs-2">` + time.getMonth() + '/' + (time.getDate() + 3) + `</div>
+                <div class='row'><div class="col-xs-2">` + daysofWeek[(new Date(data.daily.data[3].time * 1000)).getDay()] + `</div>
                 <div class="col-xs-1"></div>
                 <div class=" col-xs-1">` + Math.round(data.daily.data[3].temperatureLow) + '°' +`</div>
                 <div class=" col-xs-1"></div>
