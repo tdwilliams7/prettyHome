@@ -1,6 +1,7 @@
 var grocList = angular.module('grocList', []);
 var time;
 
+//display todays grocery items
 function displayGrocList($scope, $http) {
     $scope.formData = {};
 

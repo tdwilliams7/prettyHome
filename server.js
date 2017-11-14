@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const morgan = require('morgan');
 const methodOverride =require('method-override');
-const mongoURI = 'mongodb://admin:fakepass@ds243335.mlab.com:43335/grocerypricelist';
+const mongoURI = 'mongodb://admin:fakepass@ds155695.mlab.com:55695/grocpricelist';
 
 
 mongoose.connection.openUri(mongoURI);

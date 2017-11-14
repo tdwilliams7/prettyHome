@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>stop it New Tab</title>
+    <title>Change to New Tab</title>
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <link rel="stylesheet" type="text/css" href="css/css/weather-icons.min.css">
@@ -17,8 +17,18 @@
 <body class="container">
     <section>
     <div class="row">
-        <div class="col-sm-3">
-            To Do List
+        <div class="col-sm-3" ng-contoller='toDoList'>
+            <h4>To Do List</h4> <h4> {{ getTodosLength() }}
+
+            <div class='row' ng-repeat='todo in todos'>
+                <div class="col-sm-1"></div>
+                <div class="col-sm-1"><input type="checkbox" name="completed"></div>
+                <div class="col-sm-1"></div>
+                <div class="col-sm-6">  {{ too.text }}  </div>
+                <div class="col-sm-1"></div>
+                <div class="col-sm-1">Delete</div>
+                <div class="col-sm-1"></div>
+            </div>
         </div>
         <div class="col-sm-6" id='time'>
             <div class="col-sm-12" id='clock'></div>
