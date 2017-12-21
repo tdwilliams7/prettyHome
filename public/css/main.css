@@ -23,3 +23,16 @@ section {
 .row {
     min-height: 50%;
 }
+body main .row {
+    padding-bottom: 3%;
+}
+.bodyImage {
+    background-image: url('../assets/images/833.svg');
+    width:1200px;
+    height:1000px;
+    -webkit-filter: blur(2px);
+    z-index:-1;
+    position:absolute;
+    background-position: center;
+    background-size:cover
+}

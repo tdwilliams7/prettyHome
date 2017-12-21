@@ -12,6 +12,7 @@
     <script type="text/javascript" src='js/popper.min.js'></script>
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script>
     <script type="text/javascript" src='js/bootstrap.min.js'></script>
+    <script type="text/javascript" src='https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.19.2/moment.min.js'></script>
 
 </head>
 <body class="container">
@@ -24,7 +25,7 @@
                 <div class="col-sm-1"></div>
                 <div class="col-sm-1"><input type="checkbox" name="completed"></div>
                 <div class="col-sm-1"></div>
-                <div class="col-sm-6">  {{ too.text }}  </div>
+                <div class="col-sm-6">  {{ toDo.text }}  </div>
                 <div class="col-sm-1"></div>
                 <div class="col-sm-1">Delete</div>
                 <div class="col-sm-1"></div>
@@ -54,7 +55,7 @@
         <section ng-controller='displayGrocList'>
             <div class="col-sm-6" id='grocList'>
                 <h4> Today's Grocery List </h4>
-                <div ng-repeat='food in foods'>{{ food.name }}</div>
+                <div ng-repeat='food in foods '>{{ getToday(food) }}</div>
             </div>
         </section>
     </div>

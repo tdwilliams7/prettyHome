@@ -12,6 +12,15 @@ function displayGrocList($scope, $http) {
         .error(function(data){
             console.log('Error: ' + data);
         });
+
+    $scope.getToday = function(food){
+        var today = moment(new Date).format('YYYY-MM-DD');
+        var foodDate = moment(food.date).format('YYYY-MM-DD');
+
+        if (foodDate === today){
+            return food.name;
+        }
+    };
 }
 
 function clock(){
@@ -30,6 +39,8 @@ function clock(){
         greeting = 'Good Afternoon!';
     } else if(hours < 12){
         greeting = 'Good Morning';
+    } else if (hours === 12){
+        greeting = 'Good Afternoon';
     } else {
         hours -= 12;
         greeting = 'Good Evening';
@@ -72,7 +83,7 @@ function weather(){
                 elFeels.textContent = 'feels like ' + feels + '°';
                 console.log(icon);
                 //set icons probably move this to own function to call for each day.
-                if ( icon === 'partly-cloudy-day'){
+                if ( icon === 'partly-cloudy-day' || icon = 'cloudy' || icon = 'partly-cloudy-night'){
                     iconCurrent.innerHTML = '<i class="wi wi-day-sunny-overcast"></i>';
                 } else if (icon === 'clear-day') {
                     iconCurrent.innerHTML = '<i class="wi wi-day-sunny"></i>';
@@ -80,6 +91,8 @@ function weather(){
                     iconCurrent.innerHTML = '<i class="wi wi-night-clear"></i>';
                 } else if (icon === 'snow'){
                     iconCurrent.innerHTML = '<i class="wi wi-day-snow"></i>';
+                } else if (icon === 'rain'){
+                    iconCurrent.innerHTML = '<i class="wi wi-day-rain"></i>';
                 }
 
                 //3 day forecast
