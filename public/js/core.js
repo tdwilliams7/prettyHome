@@ -83,7 +83,7 @@ function weather(){
                 elFeels.textContent = 'feels like ' + feels + '°';
                 console.log(icon);
                 //set icons probably move this to own function to call for each day.
-                if ( icon === 'partly-cloudy-day' || icon = 'cloudy' || icon = 'partly-cloudy-night'){
+                if ( icon === 'partly-cloudy-day' || icon === 'cloudy' || icon === 'partly-cloudy-night'){
                     iconCurrent.innerHTML = '<i class="wi wi-day-sunny-overcast"></i>';
                 } else if (icon === 'clear-day') {
                     iconCurrent.innerHTML = '<i class="wi wi-day-sunny"></i>';
